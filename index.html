@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+	<title>Pizzas</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="layaout.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="pizza.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+	<body>
+		<div class="container">
+			<!-- modal -->
+			<div class="modal">
+				<div class="box" data-tam-pizza="0">
+					<div class="flex-box">
+						<div class="fotoPizza">
+							<img src="">
+						</div>
+
+
+						<div>
+							<div class="nome-pizza-box">
+								<h2>nome pizza</h22>
+							</div>
+							<div class="desc-pizza-box">
+								descricao
+							</div>
+							<div>
+								<div style="clear: left;">TAMANHO</div>
+
+								<div class="inline grande grande-hover selected" data-key="0" onclick="tamPizza(this)">
+									grande <small>---</small>
+								</div>
+								<div class="inline media media-hover" data-key="1" onclick="tamPizza(this)">
+									média  <small>--</small>
+								</div>
+								<div class="inline pequena pequena-hover" data-key="2" onclick="tamPizza(this)">
+									pequena <small>--</small>
+								</div>
+							</div>
+							<div class="conteiner-quant-preco">
+								<div>
+									PREÇO
+								</div>
+								<div class="preco">
+									R$
+								</div>
+								<div class="q-box">
+									<button onclick="dim(event)">-</button>
+									<span>1</span>
+									<button onclick="aum(event)">+</button>
+								</div>
+							</div>
+							<div class="conteiner-bt-box">
+								<button class="add" onclick="adicionarCarr()">adicionar ao carrinho</button>
+								<button class="fechar-box">cancelar</button>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- fim -->
+			<main>
+				<div class="cont-carrinho">
+					<div class="carrinho-quant" style="padding-top: 6px;font-size: 28px;">
+						---
+					</div>
+					<div class="carrinho">
+
+						<img src="imagens/carrinho.png">
+					</div>
+
+				</div>
+				<h1>Pizzas</h1>
+				<div id="container-pizza" class="cont-pizza1">
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								
+								<div class="item-bt">
+									<button class="view" onclick="abrir(0)">+</button>
+								</div>
+							</div>
+
+							<div class="nomePizza"></div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span> 
+							</div>
+
+						</div>
+						
+
+					</div>
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								<div class="item-bt">
+									<button class="view" onclick="abrir(1)">+</button>
+								</div>
+							</div>
+							
+							
+							<div class="nomePizza"></div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span>
+							</div>
+
+						</div>
+						
+							
+					</div>
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								<div class="item-bt">
+									<button class="view" onclick="abrir(2)">+</button>
+								</div>
+							</div>
+							
+							
+							<div class="nomePizza">Chocolate</div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								<div class="item-bt">
+									<button class="view" onclick="abrir(3)">+</button>
+								</div>
+							</div>
+							
+							
+							<div class="nomePizza"></div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								<div class="item-bt">
+									<button class="view" onclick="abrir(4)">+</button>
+								</div>
+							</div>
+							
+							
+							<div class="nomePizza"></div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="item-pizza">
+						<div class="cont-item-pizza">
+							<div class="cont-pizza-bt">
+								<div class="img-pizza">
+									<img src="">
+								</div>
+								<div class="item-bt">
+									<button class="view" onclick="abrir(5)">+</button>
+								</div>
+							</div>
+							
+							
+							<div class="nomePizza"></div>
+							<div>
+								G:<span class="pizzaG">--</span> | M:<span class="pizzaM">--</span> | P: <span class="pizzaP">--</span>
+							</div>
+
+						</div>
+					</div>
+				</div>			
+				<!--  modelo -->
+				<div class="model-item-carr">
+					<img src="">
+					<div class="nome-pizza-carr">---</div>
+					<div class="tamanho-carr">--</div>
+					<div class="add-carr">
+						
+						<button class="menos" onclick="dim(event)">-</button>
+						<span>1</span>
+						<button class="mais" onclick="aum(event)">+</button>
+						
+						<a href="" class="excluirPizza" onclick="exclui(event)">excluir</a>
+						
+					</div>
+				</div>
+				<!-- fim -->
+				
+			</main>
+			
+			<aside>
+				<div class="conteiner-carr-pizza">
+					<div class="fechar-mobile">X</div>
+					<h1>Suas pizzas</h1>
+					<div class="carr-pizza">
+						
+					</div>
+					
+					<div class="container-total-carr">
+						<div>
+							<strong>Total</strong>
+						</div>
+						<div class="totalCarr">-----</div>
+					</div>
+					<button  style="margin-top: 50px">finalizar compra</button>
+				</div>
+			</aside>
+			
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>

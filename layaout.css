@@ -1,0 +1,286 @@
+.modal{
+	z-index: 999;
+}
+main{
+	grid-area: main;
+}
+footer{
+	grid-area: footer;
+	background-color: #999;
+}
+aside{
+	display: none;
+	grid-area: aside;
+	width: auto;
+	height: auto;
+	background-color: #ccc;
+	overflow: auto;
+	height: 100vh;
+	/*
+	position: absolute;
+	right: 0;
+	*/
+}
+.cont-pizza1{
+	display: flex;
+}
+
+.item-pizza{
+	width: 300px;
+	height: 300px;
+	margin-right: 100px;
+}
+.carr-pizza{
+	border-bottom: 2px solid #000000;
+	padding-bottom: 15px;
+	word-wrap: break-word;
+}
+.carr-pizza img{
+	width: 60px;
+	height: 60px;
+
+}
+.item-pizza img{
+	width: 200px;
+	height: 200px;
+}
+.model-item-carr{
+	display: none;
+	position: relative;
+}
+.model-item-carr .add-carr{
+	
+	position: absolute;
+	right: 0;
+}
+.conteiner-carr-pizza{
+	padding: 15px;
+	
+}
+.total{
+	float: right;
+}
+.modal{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.box{
+	background-color: #ccc;
+	width: 650px;
+	height: auto;
+	padding: 15px;
+
+	font-size: 20px;
+}
+
+.fotoPizza{
+	
+	margin-right: 50px;
+	align-self: center;
+}
+.fotoPizza img{
+	width: 250px;
+	height: 250px;
+
+}
+
+.flex-box{
+	display: flex;
+}
+.inline{
+	float: left;
+	background-color: #666;
+	padding: 5px;
+	cursor: pointer;
+}
+.add, .fechar-box{
+	cursor: pointer;
+}
+.grande-hover:hover, .media-hover:hover, .pequena-hover:hover{
+	background-color: #888;
+}
+
+.grande{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.pequena{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.inline small{
+	font-size: 14px;
+}
+.selected{
+	background-color: #0066ff;
+}
+.q-box , .preco{
+	float: left;
+}
+.preco{
+	margin-right: 50px;
+	font-size: 27px;
+}
+.conteiner-bt-box{
+	clear: both;
+	padding-top: 20px;
+}
+.desc-pizza-box{
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+.conteiner-quant-preco{
+	padding-top: 10px;
+	clear: both;
+}
+.container-total-carr{
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	
+}
+.cont-item-pizza{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cont-pizza-bt{
+	position: relative;
+	margin-bottom: 10px;
+}
+.item-bt{
+	position: absolute;
+	bottom: 0;
+	left: 90px;
+}
+.cont-carrinho{
+	background-color: #888;
+	height: 40px;
+	display: none;
+}
+.carrinho{
+	padding: 5px;
+}
+.carrinho img{
+	width: 30px;
+	height: 30px;
+}
+.fechar-mobile{
+	display: none;
+}
+.view{
+	border: 0px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: blue;
+	border-radius: 100%;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+	.cont-pizza1, .cont-pizza2{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.container{
+		display: grid;
+		grid-template-areas:"aside"
+							"main"
+							"footer"
+		;
+	}
+	.cont-carrinho{
+		display: flex;
+		justify-content: flex-end;
+	}
+	aside{
+		position: absolute;
+		height: 300px;
+		width: 100%;
+	}
+	.flex-box{
+		flex-direction: column;
+	}
+	.item-pizza{
+		margin: 0px;
+	}
+	.fechar-mobile{
+		display: block;
+	}
+}
+@media (min-width: 1024px){
+	.cont-pizza1{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.container{
+		display: grid;
+		grid-template-areas: "aside"
+							"main"
+							"footer"
+		;
+	}
+	aside{
+		height: 300px;
+	}
+}
+@media (min-width: 1440px){
+	.cont-pizza1{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	
+	.container{
+		display: grid;
+		grid-template-areas: "main aside"
+						    "footer footer"
+		;
+	}
+	.item-pizza{
+		margin: 0px;
+	}
+	aside{
+		width: 350px;
+	}
+}
+@media (min-width: 1920px){
+	.cont-pizza1{
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+	}
+
+	.container{
+		margin-left: 15%;
+		margin-right: 15%;
+
+	}
+
+	aside{
+		height: 100vh;
+		width: 350px;
+	}
+	.margem-right{
+		margin-right: 0;
+	}
+	.container{
+		display: grid;
+		grid-template-areas: "main aside"
+						    "footer footer"
+		;
+
+	}
+}
