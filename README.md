@@ -1,1 +1,1 @@
-meu projeto pessoal de comprar de pizza
+meu projeto pessoal de compra de pizza
